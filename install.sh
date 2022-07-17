@@ -7,7 +7,6 @@ curl -L https://nixos.org/nix/install | sh
 # install packages
 nix-env -iA \
 	nixpkgs.zsh \
-	nixpkgs.antibody \
 	nixpkgs.git \
 	nixpkgs.neovim \
 	nixpkgs.tmux \
@@ -33,10 +32,10 @@ command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh) $USER
 
 # bundle zsh plugins 
-antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+# antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 
 # install neovim plugins
-nvim --headless +PlugInstall +qall
+# nvim --headless +PlugInstall +qall
 
 # Use kitty terminal on MacOS
 [ `uname -s` = 'Darwin' ] && stow kitty
