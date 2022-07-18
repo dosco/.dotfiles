@@ -40,6 +40,7 @@ Plug 'kyazdani42/nvim-web-devicons'                " Devicons
 Plug 'nvim-lualine/lualine.nvim'                   " Status line
 Plug 'akinsho/bufferline.nvim'                     " Buffers
 Plug 'machakann/vim-highlightedyank'               " Highlight yanked text
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'                    " File explorer
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' } " Color scheme
 " Lsp
@@ -59,11 +60,17 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+" Fsf
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Go
+Plug 'ray-x/go.nvim'
+Plug 'ray-x/guihua.lua' 
 
 call plug#end()
 
 lua require('jakewies')
-
+lua require('go').setup()
 
 " --- Colors
 
@@ -83,6 +90,8 @@ nnoremap <silent><leader>q :bdelete<Cr>
 
 
 " --- Autocommands
+"
+autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()
 
 " Remove vert split 
 " https://www.reddit.com/r/vim/comments/effwku/transparent_vertical_bar_in_vim/

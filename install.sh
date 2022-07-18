@@ -17,7 +17,10 @@ nix-env -iA \
 	nixpkgs.bat \
 	nixpkgs.gnumake \
 	nixpkgs.gcc \
-	nixpkgs.direnv
+	nixpkgs.direnv \
+    awscli \
+    awsebcli \
+    google-cloud-sdk
 
 # stow dotfiles
 stow git
