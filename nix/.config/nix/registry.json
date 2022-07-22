@@ -1,0 +1,16 @@
+{
+  "flakes": [
+    {
+      "from": {
+        "id": "neovim-nightly",
+        "type": "indirect"
+      },
+      "to": {
+        "owner": "nix-community",
+        "repo": "neovim-nightly-overlay",
+        "type": "github"
+      }
+    }
+  ],
+  "version": 2
+}

@@ -4,12 +4,22 @@
 2. Run `install.sh`
 3. Open up new window to initiate `zsh` shell
 
-### Current issues
+Other Apps
 
-- installing `nvim` plugins in `--headless` causes error output, but doesn't break installation
-- Would like to improve the install script
-- Handle installation on different OS (MacOS, Linux, WSL2)
+Kitty (Terminal) 
+https://github.com/kovidgoyal/kitty/releases
 
-### Future optimizations
+Raycast (Spotlight Replacement)
+https://www.raycast.com/
 
-- Improve install script by automating step 3 above, initializing the `zsh` environment
+Firefox
+https://www.mozilla.org/en-CA/firefox/products/
+
+VSCode (IDE)
+https://code.visualstudio.com/
+
+LogSeq (Notes)
+https://logseq.com/
+
+
+
