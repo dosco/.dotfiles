@@ -24,15 +24,16 @@ nix-env -iA \
     awsebcli \
     google-cloud-sdk
 
-nix registry add flake:neovim-nightly github:nix-community/neovim-nightly-overlay
-nix profile install "neovim-nightly#neovim"
-
 # stow dotfiles
 stow nix
 stow git
 stow nvim
 stow tmux
 stow zsh
+stow p10k
+
+nix registry add flake:neovim-nightly github:nix-community/neovim-nightly-overlay
+nix profile install "neovim-nightly#neovim"
 
 # add zsh as a login shell
 command -v zsh | sudo tee -a /etc/shells
