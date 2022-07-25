@@ -1,5 +1,3 @@
-source ~/.config/zsh/p10k/powerlevel10k.zsh-theme
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -43,16 +41,27 @@ export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --border --margin=1 --pad
 
 # PATH
 # export PATH=${PATH}:/usr/local/go/bin
-# export PATH=${PATH}:${HOME}/go/bin
+export PATH=${PATH}:${HOME}/go/bin
 
 export BAT_THEME="gruvbox-dark"
+
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
 
 # nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source ~/.p10k.zsh
-
 bindkey -v
 
+# clone antidote if necessary
+[[ -e ~/.antidote ]] || git clone https://github.com/mattmc3/antidote.git ~/.antidote
+
+# source antidote
+source ~/.antidote/antidote.zsh
+
+# generate and source plugins from ~/.zsh_plugins.txt
+antidote load
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
