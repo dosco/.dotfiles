@@ -1,8 +1,10 @@
 # .dotfiles
 
 1. Clone this repository
-2. Run `install.sh`
-3. Open up new window to initiate `zsh` shell
+2. Run `./install-nix`
+3. Open up new window to initiate `nix`
+4. Run `./install.sh`
+5. Open up new window to initiate `zsh` shell
 
 Other Apps
 

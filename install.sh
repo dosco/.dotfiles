@@ -1,9 +1,3 @@
-# install nix
-curl -L https://nixos.org/nix/install | sh
-
-# source nix
-. ~/.nix-profile/etc/profile.d/nix.sh
-
 # install packages
 nix-env -iA \
   nixpkgs.coreutils \
@@ -17,12 +11,12 @@ nix-env -iA \
 	nixpkgs.bat \
 	nixpkgs.gnumake \
 	nixpkgs.gcc \
-  nixpkgs.go \
+ 	nixpkgs.go \
 	nixpkgs.direnv \
-  nixpkgs.nerdfonts \
-    awscli \
-    awsebcli \
-    google-cloud-sdk
+ 	nixpkgs.terminus-nerdfont \
+ 	nixpkgs.awscli2 \
+ 	nixpkgs.awsebcli \
+ 	nixpkgs.google-cloud-sdk
 
 # stow dotfiles
 stow nix
